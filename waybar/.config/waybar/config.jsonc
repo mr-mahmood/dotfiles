@@ -5,8 +5,16 @@
 	"position": "top",
 
 	"modules-left": [
+		"custom/right-arrow-dark",
+		"custom/right-arrow-light",
 		"hyprland/workspaces",
-		"custom/right-arrow-dark"
+		"custom/right-arrow-dark",
+		"custom/right-arrow-light",
+        "network",
+		"custom/right-arrow-dark",
+		"custom/right-arrow-light",
+        "custom/temperature",
+		"custom/right-arrow-dark",
 	],
 	"modules-center": [
 		"custom/left-arrow-dark",
@@ -62,27 +70,27 @@
 	},
 
 	"clock#1": {
-		"format": "{:%a}",
+		"format": "󱨴 {:%a}",
 		"tooltip": false
 	},
 	"clock#2": {
-		"format": "{:%H:%M}",
+		"format": " {:%H:%M}",
 		"tooltip": false
 	},
 	"clock#3": {
-		"format": "{:%m-%d}",
+		"format": " {:%m-%d}",
 		"tooltip": false
 	},
 
 	"pulseaudio": {
 		"format": "{icon} {volume:2}%",
 		"format-bluetooth": "{icon}  {volume}%",
-		"format-muted": "MUTE",
+		"format-muted": " ",
 		"format-icons": {
-			"headphones": "",
+			"headphones": " ",
 			"default": [
-				"",
-				""
+				" ",
+				" "
 			]
 		},
 		"scroll-step": 5,
@@ -91,13 +99,14 @@
 	},
 	"memory": {
 		"interval": 5,
-		"format": "Mem {}%"
+		"format": "  {}%"
 	},
 	"cpu": {
 		"interval": 5,
-		"format": "CPU {usage:2}%"
+		"format": " {usage:2}%"
 	},
     "battery": {
+        "interval": 5,
         "states": {
             "good": 95,
             "warning": 30,
@@ -106,17 +115,32 @@
         "format": "{icon} {capacity}%",
         "format-charging": " {capacity}%",               // Simple text icon
         "format-plugged": " {capacity}%",               // Nerd Font icon (plugged in)
-        "format-alt": "{icon} {time} ({capacity}%)",     // Alternative format
+        "format-alt": "{icon}  {capacity}%",     // Alternative format
         "format-icons": [
-            "", "", "", "", ""                     // Nerd Font battery icons
+            " ", " ", " ", " ", " "                     // Nerd Font battery icons
         ]
     },
 	"disk": {
 		"interval": 5,
-		"format": "Disk {percentage_used:2}%",
+		"format": " {percentage_used:2}%",
 		"path": "/"
 	},
 	"tray": {
 		"icon-size": 20
-	}
+	},
+
+    "network": {
+        "format-wifi": "  {essid}",
+        "tooltip-format": "IP: {ipaddr}",
+        "interval": 5
+    },
+
+    "custom/temperature": {
+        "exec": "sensors | awk '/Package|Composite|Tctl|Tdie/ {print $2}' | grep -oE '[0-9.]+' | awk '{sum+=$1; count++} END {print sum/count}' | cut -d'.' -f1",
+        "format": " {}°C",
+        "interval": 5,
+        "tooltip": "Detailed Temperatures:\n{sensors | sed 's/^/  /'}",
+        "on-click": "alacritty -e btop"
+    }
+
 }

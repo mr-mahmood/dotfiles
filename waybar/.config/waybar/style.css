@@ -20,6 +20,8 @@ window#waybar {
 }
 
 #workspaces,
+#network,
+#custom-temperature,
 #clock.1,
 #clock.2,
 #clock.3,
@@ -64,8 +66,18 @@ window#waybar {
 #disk {
 	color: #f4dbd6;
 }
+#network {
+    color: #91d7e3;
+}
+#custom-temperature {
+    color: #7dc4e4;
+}
 
 #clock,
+#network {
+    padding: 0 10px;
+}
+#cusom-temperature,
 #pulseaudio,
 #memory,
 #cpu,
