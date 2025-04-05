@@ -48,6 +48,10 @@ cd ~/dotfiles/hyprland
 stow hyprland
 ```
 
+
+> [!WARNING]  
+> if you have any problem with stow, delete hypr directory in .config directory and try again.
+
 5. hyprland config has multiple parts, so we need to install them one by one.
 ```bash
 sudo pacman -S waybar hyprlock hyprpaper swww wofi
@@ -107,7 +111,19 @@ once we are in hyprland, we can use some keybindings to open some apps, so lets 
 - super + t : cahnge wallpaper
 - super + c : close active window
 - super + m : exit hyprland
+- super + ctrl + l : lock screen
+
 - print : take screenshot of a region
 - shift + print : take screenshot of the whole screen
+
+- super + Shift + h : move window to the left
+- super + Shift + j : move window to the bottom
+- super + Shift + k : move window to the top
+- super + Shift + l : move window to the right
+
+- super + h : move window focus to the left
+- super + j : move window focus to the bottom
+- super + k : move window focus to the top
+- super + l : move window focus to the right
 
 there is a lot more about hyprland and i leave it to you to explore it.
