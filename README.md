@@ -5,7 +5,7 @@ This is my personal dotfiles repository. It contains my configuration files for 
 I might add an install script for my dotfiles in the future. but for now, i will just keep it as a readme file. so before we start clone this repo to your home directory.
 
 ```bash
-git clone https://github.com/mahmoodib/dotfiles.git
+git clone https://github.com/mr-mahmood/dotfiles.git
 ```
 
 now lets start, shall we?
@@ -54,11 +54,10 @@ sudo pacman -S waybar hyprlock hyprpaper swww wofi
 yay -S waypaper hyprshot swaync
 ```
 
-> [WARNING]  
+> [!WARNING]  
 > [yay](https://github.com/Jguer/yay) can be install using pacman, and if you find any problem using yay,
 you can let me know in the issues section.
-
-> [WARNING]  
+>
 > using hyperland and other apps need some custome nerdfonts, so you need to install them. i provide fonts in my dotfiles use them
 
 
