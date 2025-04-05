@@ -94,7 +94,8 @@ so now we have installed all depentences and add configs for hyprland, now lets 
 
 it is beatiful, isn't it? now lets find out what we can do with it.
 
-> [!INFO]
+> [!NOTE]
+>
 > Hyperland is a tiling window manager, therefore we can use keyboard without need of a mouse
 and this will improve our productivity. by the way it's fun to use it so that's a very good thing.
 
