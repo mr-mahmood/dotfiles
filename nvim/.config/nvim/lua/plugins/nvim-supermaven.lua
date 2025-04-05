@@ -2,10 +2,11 @@ return {
 	"supermaven-inc/supermaven-nvim",
 	config = function()
 		require("supermaven-nvim").setup({
+            max_width = 1000,
 			keymaps = {
 				accept_suggestion = "<Tab>",
 				clear_suggestion = "<C-]>",
-				accept_word = "<C-j>",
+				accept_word = "<C-l>",
 			},
 			ignore_filetypes = {}, -- or { "cpp", }
 			color = {
