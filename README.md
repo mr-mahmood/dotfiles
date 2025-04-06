@@ -15,7 +15,6 @@ now lets start, shall we?
 This are the apps i am using and i have added a part for config and install it. so click on every one of them that you like but i suggest you to follow the way that i add.
 
 - [hyperland](#hyperland)
-- [kitty](#kitty)
 - [fish](#fish)
 - [nvim](#nvim)
 - [starship](#starship)
@@ -24,7 +23,7 @@ This are the apps i am using and i have added a part for config and install it. 
 - [waypaper](#waypaper)
 - [wofi](#wofi)
 
-## hyperland
+# hyperland
 
 This is my personal configuration for hyperland. i am using it for my daily work. and it is amazing as i personalize it for my self, for install it first we need to install **[hyprland](https://hyprland.org/)** it self and **[kitty](https://github.com/kovidgoyal/kitty)** because hyprland use kitty as it`s default terminal
 
@@ -105,25 +104,41 @@ and this will improve our productivity. by the way it's fun to use it so that's 
 
 once we are in hyprland, we can use some keybindings to open some apps, so lets see what we can do with this keybindings:
 
+---
+> [!TIP]
+>
+> super is window key by default and you can change it in config file
+
+open and close windows:
+- super + space : launch wofi
 - super + q : open terminal(kitty, fish, etc)
 - super + e : open file Manager
 - super + f : open firefox
-- super + t : cahnge wallpaper
 - super + c : close active window
+---
+exit and lock hyprland:
 - super + m : exit hyprland
 - super + ctrl + l : lock screen
-
+---
+wallpaper:
+- super + t : cahnge wallpaper
+- super + shift + t : launch waypaper
+---
+screenshot:
 - print : take screenshot of a region
 - shift + print : take screenshot of the whole screen
-
+---
+move windows and focus:
 - super + Shift + h : move window to the left
 - super + Shift + j : move window to the bottom
 - super + Shift + k : move window to the top
 - super + Shift + l : move window to the right
-
 - super + h : move window focus to the left
 - super + j : move window focus to the bottom
 - super + k : move window focus to the top
 - super + l : move window focus to the right
+---
 
 there is a lot more about hyprland and i leave it to you to explore it.
+
+# fish termianl

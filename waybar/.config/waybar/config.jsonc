@@ -137,10 +137,8 @@
 
     "custom/temperature": {
         "exec": "sensors | awk '/Package|Composite|Tctl|Tdie/ {print $2}' | grep -oE '[0-9.]+' | awk '{sum+=$1; count++} END {print sum/count}' | cut -d'.' -f1",
-        "format": " {}°C",
+        "format": "  {}°C ",
         "interval": 5,
-        "tooltip": "Detailed Temperatures:\n{sensors | sed 's/^/  /'}",
-        "on-click": "alacritty -e btop"
     }
 
 }
