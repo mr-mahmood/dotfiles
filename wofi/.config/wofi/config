@@ -1,0 +1,39 @@
+mode=drun
+allow_images=false
+image_size=30
+prompt=Search
+columns=1
+width=400
+height=300
+no_actions=true
+location=center
+filter_rate=100
+allow_markup=true
+halign=fill
+orientation=vertical
+content_halign=fill
+matching=contains
+insensitive=true
+term=alacritty
+parse_search=true
+single_click=false
+line_wrap=char
+key_down=Tab
+key_expand=Right
+key_forward=Down
+
+# Appearance & Transparency
+show=all
+hide_scroll=true
+dynamic_lines=true
+layer=overlay
+always_parse_args=true
+
+# Transparency (requires compositor like picom)
+background_color=#282a36E6  # Slightly transparent background
+border_color=#6272A4        # Border color
+border_width=1              # Thin border
+rounded_corners=true        # Rounded corners (if supported)
+
+# Colors (Dracula theme example)
+colors=colors

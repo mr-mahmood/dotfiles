@@ -13,7 +13,7 @@ return {
             heading = { position = 'inline' },
             pipe_table = { preset = 'double' },
             completions = { lsp = { enabled = true } },
-            file_types = { "markdown", "quarto" },
+            file_types = { "markdown"},
             render_modes = { "n", "c", "t" },
             enabled = true,
         })

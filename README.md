@@ -16,8 +16,8 @@ This are the apps i am using and i have added a part for config and install it. 
 
 - [hyperland](#hyperland)
 - [fish](#fish)
-- [nvim](#nvim)
 - [starship](#starship)
+- [nvim](#nvim)
 - [tmux](#tmux)
 - [waybar](#waybar)
 - [waypaper](#waypaper)
@@ -30,7 +30,7 @@ This is my personal configuration for hyperland. i am using it for my daily work
 1. install kitty and hyprland and stow
 
 ```bash
-sudo pacman -S kitty hyprland stow
+sudo pacman -S kitty hyprland stow fish starship
 ```
 
 2. after installing completed, log out of your gnome session or KDE session and log in to hyprland.
@@ -43,7 +43,7 @@ don't panic, it's just just original first run hyprland screen.
 4. now we need to install our configurations for hyprland, so we will use stow to install it.
 
 ```bash
-cd ~/dotfiles/hyprland
+cd ~/dotfiles
 stow hyprland
 ```
 
@@ -141,4 +141,86 @@ move windows and focus:
 
 there is a lot more about hyprland and i leave it to you to explore it.
 
-# fish termianl
+# fish
+[fish](https://fishshell.com/) is a shell that is similar to bash, but with a lot of features. i am using it for my daily work and i have added a part for config and install it. main resone for me to use it is its auto completion which is amazing
+
+we install it using pacman before so we will config it in the fish config file.
+```bash
+cd ~/dotfiles
+stow fish
+```
+now when we open terminal it use fish and starship as it`s prompt.which make it look like this:
+
+![starship](./readme_images/starship.png)
+
+# starship
+[starship](https://starship.rs/) is a prompt for zsh, bash, fish, powershell, and xonsh. it is a very useful tool for developers and it`s a must have for any developer. i am using it in daily work and it make my terminal look clean and well structured so i will recemond you to use it as well, we already install it before and it is in fish config file, you can use it or delete it.
+
+# nvim
+[nvim](https://neovim.io/) is a text editor, a modern, blazing fast, persistent text editor that's easy to extend with Lua. it is a fork of vim it self and it has a lot of features and it is very powerful and i am using it for my daily work. i have a lot of plugins for it which make it very easy and straightforward to use, i add them here and you only need to open nvim once and it will install them automatically.
+
+but first lets install it:
+```bash
+sudo pacman -S neovim
+cd ~/dotfiles
+stow nvim
+```
+
+after you install plugins you should close and reopen it and you will see something like this:
+
+![nvim-plugins](./readme_images/nvim.png)
+
+now lets see what plugins i am using and what they do:
+
+1. [catppuccin](https://github.com/catppuccin/nvim)
+    - it is a theme for nvim, it is very beautiful and i am using it for my daily work.
+2. [cmd-completion](https://github.com/hrsh7th/cmp-cmdline)
+    - it is a plugin for nvim which provides autocompletion for commands.
+3. [comment](https://github.com/tpope/vim-commentary)
+    - it is a plugin for nvim which provides commenting functionality.
+4. [dashboard](https://github.com/goolord/alpha-nvim)
+    - it is a dashboard for nvim, which make home screen for nvim look beautiful.
+5. [eyeliner](https://github.com/jinh0/eyeliner.nvim)
+    - it is a plugin for nvim which provides an easy way to find words in a line.
+6. [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
+    - it is a plugin for nvim which provides a visual indicator for indentation levels.
+7. [leap](https://github.com/ggandor/leap.nvim)
+    - it is a plugin for nvim which provides a cool way to find words in a file.
+8. [lualine](https://github.com/nvim-lualine/lualine.nvim)
+    - it is a plugin for nvim which provides a status bar for nvim.
+9. [markdown-preview](https://github.com/iamcco/markdown-preview.nvim)
+    - it is a plugin for nvim which provides a markdown preview.
+10. [minilogo](https://github.com/echasnovski/mini.nvim)
+    - it is a plugin for nvim which provides a logo for files in nvim.
+11. [neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
+    - it is a plugin for nvim which provides a file explorer.
+12. [noice](https://github.com/folke/noice.nvim)
+    - it is a plugin for nvim which provides a notification system.
+13. [none-ls](https://github.com/nvimtools/none-ls.nvim)
+    - it is a plugin for nvim which provides a language server.
+14. [oil](https://github.com/stevearc/oil.nvim)
+    - it is a plugin for nvim which provides a file explorer.
+15. [render-markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim)
+    - it is a plugin for nvim which provides a markdown preview.
+16. [snack](https://github.com/folke/snack.nvim)
+    - it is a plugin for nvim which you can use some custome plugins with in it like lazygit
+17. [supermaven](https://github.com/supermaven-inc/supermaven-nvim)
+    - it is a plugin for nvim which is like copilot for nvim. but it is faster than copilot for me
+18. [surround](https://github.com/kylechui/nvim-surround)
+    - it is a plugin for nvim which provides a way to surround text with a character.
+19. [telescope](https://github.com/nvim-telescope/telescope.nvim)
+    - it is a plugin for nvim which provides a fuzzy finder.
+20. [tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
+    - it is a plugin for nvim which provides a way to navigate between tmux panes within nvim.
+21. [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+    - it is a plugin for nvim which provides a syntax highlighting for programming languages.
+22. [typro](https://github.com/nvzone/typr)
+    - it is a plugin for nvim which provides a typing training in nvim.
+23. [undotree](https://github.com/mbbill/undotree)
+    - it is a plugin for nvim which provides a tree view for undo history.
+24. [vague](https://github.com/vague2k/vague.nvim)
+    - it is a dark theme for nvim.
+
+thats all i use and if i find any new plugin i will add it here.
+some of them need extra work to run correctly, but i will leave it to you to do it.
+

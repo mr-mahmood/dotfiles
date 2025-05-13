@@ -131,6 +131,7 @@
 
     "network": {
         "format-wifi": "  {essid}",
+        "format-disconnected": "󱚼  Disconnected",
         "tooltip-format": "IP: {ipaddr}",
         "interval": 5
     },
