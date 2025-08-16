@@ -8,6 +8,42 @@ I might add an install script for my dotfiles in the future. but for now, i will
 git clone https://github.com/mr-mahmood/dotfiles.git
 ```
 
+before we move on, lets install all the dependencies for this repo.
+
+```bash
+sudo pacman -S nvim git stow yay base-devel fakeroot nodejs npm lazygit python3 kitty hyprland stow fish starship waybar hyprlock hyprpaper swww wofi ripgrep
+```
+```bash
+yay -S waypaper hyprshot swaync
+```
+
+now we have to move the dotfiles to there destination with the help of stow:
+
+```bash
+cd ~/dotfiles
+stow backgrounds
+stow fish
+stow Fonts
+stow hyprland
+stow kitty
+stow nvim
+stow starship
+stow swaync
+stow tmux
+stow waybar
+stow waypaper
+stow wofi
+```
+
+> [!WARNING]  
+> if you have any problem with stow, delete hypr directory in .config directory and try again.
+
+> [!WARNING]  
+> [yay](https://github.com/Jguer/yay) can be install using pacman, and if you find any problem using yay,
+you can let me know in the issues section.
+>
+> using hyperland and other apps need some custome nerdfonts, so you need to install them. i provide fonts in my dotfiles use them
+
 now lets start, shall we?
 
 ## apps
@@ -25,44 +61,15 @@ This are the apps i am using and i have added a part for config and install it. 
 
 # hyperland
 
-This is my personal configuration for hyperland. i am using it for my daily work. and it is amazing as i personalize it for my self, for install it first we need to install **[hyprland](https://hyprland.org/)** it self and **[kitty](https://github.com/kovidgoyal/kitty)** because hyprland use kitty as it`s default terminal
-
-1. install kitty and hyprland and stow
-
-```bash
-sudo pacman -S kitty hyprland stow fish starship
-```
+This is my personal configuration for hyperland. i am using it for my daily work. and it is amazing as i personalize it for my self, for install it first we need to install **[hyprland](https://hyprland.org/)** it self and **[kitty](https://github.com/kovidgoyal/kitty)** because hyprland use kitty as it`s default terminal, but we already install all we need.
 
 2. after installing completed, log out of your gnome session or KDE session and log in to hyprland.
 
 3. Now you are in hyprland and you see a screen like this:
 
 ![hyprland](./readme_images/hyprland-first-run-1.webp)
-don't panic, it's just just original first run hyprland screen.
-
-4. now we need to install our configurations for hyprland, so we will use stow to install it.
-
-```bash
-cd ~/dotfiles
-stow hyprland
-```
-
-
-> [!WARNING]  
-> if you have any problem with stow, delete hypr directory in .config directory and try again.
-
-5. hyprland config has multiple parts, so we need to install them one by one.
-```bash
-sudo pacman -S waybar hyprlock hyprpaper swww wofi
-yay -S waypaper hyprshot swaync
-```
-
-> [!WARNING]  
-> [yay](https://github.com/Jguer/yay) can be install using pacman, and if you find any problem using yay,
-you can let me know in the issues section.
->
-> using hyperland and other apps need some custome nerdfonts, so you need to install them. i provide fonts in my dotfiles use them
-
+don't panic, it's just just original first run hyprland screen. but if you see this it mean you dont follow the steps correctly.
+because once you install all the dependencies, you will see a much better screen. not this one. we will see it at end of readme
 
 - [waybar](https://github.com/Alexays/Waybar) is a status bar for hyprland like this:
 
@@ -85,11 +92,6 @@ you can let me know in the issues section.
 - [hyprshot](https://github.com/Gustash/Hyprshot) is a screenshot utility for hyprland
 - [swaync](https://github.com/ErikReider/SwayNotificationCenter) is a notification daemon for hyprland
 
-6. now lets add our wallpapers to hyprland, so we will use waypaper and hyprpaper to do that. but first lets add it to config directory and rest of it is automatic:
-```bash
-cd ~/dotfiles
-stow backgrounds
-```
 
 so now we have installed all depentences and add configs for hyprland, now lets use it. and learn what we can do with it, if you installed hyprland and add configs to it, you should see something like this after a reboot:
 
@@ -144,11 +146,6 @@ there is a lot more about hyprland and i leave it to you to explore it.
 # fish
 [fish](https://fishshell.com/) is a shell that is similar to bash, but with a lot of features. i am using it for my daily work and i have added a part for config and install it. main resone for me to use it is its auto completion which is amazing
 
-we install it using pacman before so we will config it in the fish config file.
-```bash
-cd ~/dotfiles
-stow fish
-```
 now when we open terminal it use fish and starship as it`s prompt.which make it look like this:
 
 ![starship](./readme_images/starship.png)
@@ -158,13 +155,6 @@ now when we open terminal it use fish and starship as it`s prompt.which make it 
 
 # nvim
 [nvim](https://neovim.io/) is a text editor, a modern, blazing fast, persistent text editor that's easy to extend with Lua. it is a fork of vim it self and it has a lot of features and it is very powerful and i am using it for my daily work. i have a lot of plugins for it which make it very easy and straightforward to use, i add them here and you only need to open nvim once and it will install them automatically.
-
-but first lets install it:
-```bash
-sudo pacman -S neovim
-cd ~/dotfiles
-stow nvim
-```
 
 after you install plugins you should close and reopen it and you will see something like this:
 
