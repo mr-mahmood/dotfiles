@@ -3,4 +3,3 @@ if status is-interactive
 end
 
 starship init fish | source
-source /opt/venv/global_venv/bin/activate.fish
