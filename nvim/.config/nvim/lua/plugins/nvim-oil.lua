@@ -25,6 +25,7 @@ return {
             keymaps = {
                 ["<CR>"] = "actions.select",
                 ["-"] = { "actions.parent", mode = "n" },
+                ["-"] = { "actions.close", mode = "n" },
             },
         })
 
