@@ -1,87 +1,84 @@
 * {
-	font-size: 18px;
+	font-size: 16px;
 	font-family: "JetBrainsMono Nerd Font", monospace;
 }
 
 window#waybar {
-
-	background: #24273a;
-	color: #cad3f5;
+    background: rgba(26, 27, 38, 0.0);
+    color: #c0caf5;
+    transition: background-color .5s;
 }
 
-#custom-right-arrow-dark,
-#custom-left-arrow-dark {
-	color: #181926;
+.modules-left {
+    background: rgba(0, 0, 8, 0.5);
+    margin: 5px 5px;
+    padding: 0 0px;
+    border-radius: 30px;
 }
-#custom-right-arrow-light,
-#custom-left-arrow-light {
-	color: #24273a;
-	background: #181926;
+.modules-center {
+    background: rgba(0, 0, 8, 0.5);
+    margin: 5px 5px;
+    padding: 0 0px;
+    border-radius: 30px;
 }
-
-#workspaces,
-#network,
-#custom-temperature,
-#clock.1,
-#clock.2,
-#clock.3,
-#pulseaudio,
-#memory,
-#cpu,
-#battery,
-#disk,
-#tray {
-	background: #181926;
+.modules-right {
+    background: rgba(0, 0, 8, 0.5);
+    margin: 5px 5px;
+    padding: 0 0px;
+    border-radius: 30px;
 }
 
-#workspaces button {
-	padding: 0 2px;
-	color: #cad3f5;
+.modules-left {
+    padding: 0 0px;
 }
-#workspaces button.active {
-	color: #f5a97f;
-}
-#workspaces button:hover {
-	box-shadow: inherit;
-	text-shadow: inherit;
-}
-#workspaces button:hover {
-	background: #1a1a1a;
-	border: #1a1a1a;
-	padding: 0 3px;
-}
-
-#pulseaudio {
-	color: #f0c6c6;
-}
-#memory {
-	color: #ed8796;
-}
-#cpu {
-	color: #a6da95;
-}
-#battery {
-	color: #8aadf4;
-}
-#disk {
-	color: #f4dbd6;
-}
-#network {
-    color: #91d7e3;
-}
-#custom-temperature {
-    color: #7dc4e4;
+.modules-center {
+    padding: 0 0px;
 }
 
 #clock,
-#network {
-    padding: 0 10px;
-}
-#cusom-temperature,
-#pulseaudio,
-#memory,
-#cpu,
 #battery,
-#disk {
-	padding: 0 10px;
+#cpu,
+#memory,
+#disk,
+#temperature,
+#network,
+#mpd {
+    padding: 0 10px;
+    border-radius: 30px;
+}
+
+#clock:hover,
+#battery:hover,
+#cpu:hover,
+#memory:hover,
+#disk:hover,
+#temperature:hover,
+#network:hover,
+#mpd:hover {
+    background: rgba(26, 27, 38, 0.9);
+}
+
+#workspaces button {
+  background: transparent;
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-weight: 900;
+  font-size: 13pt;
+  color: #c0caf5;
+  border:none;
+  border-radius: 30px;
+}
+
+#workspaces button.active {
+    background: #c0caf5;
+    color: #1793d1;
+}
+
+#custom-arch {
+    margin-left: 5px;
+    padding: 0 10px;
+    font-size: 25px;
+    transition: color .5s;
+}
+#custom-arch:hover {
+    color: #1793d1;
 }
